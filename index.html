@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Planeta em foco</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="capa">
       <div class="linha-superior">
         <span>Observatório ambiental</span>
@@ -59,26 +62,67 @@
       </div>
     </div>
     <main>
-            <section class="temas" aria-label="Temas ambientais">
-                <div class="titulo-secao">
-                        <p class="subtitulo">Em pauta</p>
-            <h2>O cuidado começa quando a gente olha.</h2>
+      <section class="temas" aria-label="Temas ambientais">
+        <div class="titulo-secao">
+          <p class="subtitulo">Em pauta</p>
+          <h2>O cuidado começa quando a gente olha.</h2>
         </div>
         <div class="grade-imagens">
-        <figure class="cartao-imagem" tabindex="0">
-            <img src="img/pexels-tomfisk-5368119.jpg.jpeg" alt="Comunidade sem saneamento básico">
-            <figcaption><span>01 / SANEAMENTO</span><strong>Infraestrutura também é saúde.</strong><span>Sem saneamento básico, comunidades ficam mais expostas à poluição e a doenças.</span></figcaption>
-        </figure>
-        <figure class="cartao-imagem imagem-secundaria" tabindex="0">
-            <img src="img/pexels-shardar-tarikul-islam-84327533-9090149.jpg.jpeg" alt="Resíduos descartados em uma praia">
-            <figcaption><span>02 / RESÍDUOS</span><strong>O lixo não desaparece.</strong><span>Reduzir, reutilizar e reciclar ajuda a proteger os oceanos e a vida que depende deles.</span></figcaption>
-        </figure>
+          <figure class="cartao-imagem" tabindex="0">
+            <img
+              src="img/pexels-tomfisk-5368119.jpg.jpeg"
+              alt="Comunidade sem saneamento básico"
+            />
+            <figcaption>
+              <span>01 / SANEAMENTO</span
+              ><strong>Infraestrutura também é saúde.</strong
+              ><span
+                >Sem saneamento básico, comunidades ficam mais expostas à
+                poluição e a doenças.</span
+              >
+            </figcaption>
+          </figure>
+          <figure class="cartao-imagem imagem-secundaria" tabindex="0">
+            <img
+              src="img/pexels-shardar-tarikul-islam-84327533-9090149.jpg.jpeg"
+              alt="Resíduos descartados em uma praia"
+            />
+            <figcaption>
+              <span>02 / RESÍDUOS</span><strong>O lixo não desaparece.</strong
+              ><span
+                >Reduzir, reutilizar e reciclar ajuda a proteger os oceanos e a
+                vida que depende deles.</span
+              >
+            </figcaption>
+          </figure>
         </div>
       </section>
     </main>
-    <hr>
+    <hr />
     <footer>
-        <p>&copy; 2026 Planeta em foco. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Planeta em foco. Todos os direitos reservados.</p>
     </footer>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollButton = document.querySelector(".seta-rolagem");
+
+        if (!scrollButton) return;
+
+        const goToBottom = () => {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+        };
+
+        scrollButton.addEventListener("click", goToBottom);
+        scrollButton.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            goToBottom();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
