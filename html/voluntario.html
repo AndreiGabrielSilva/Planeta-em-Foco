@@ -20,7 +20,7 @@
 					<div class="opcoes-menu">
 						<a class="link-menu" href="../index.html">Início</a>
 						<a class="link-menu" href="sobre-nos.html">Sobre nós</a>
-						<a class="link-menu" href="projetos.html">Contato</a>
+						<a class="link-menu" href="projetos.html">Projetos</a>
 						<a class="link-menu" href="feitos.html">Feitos</a>
 						<a class="link-menu" href="blog.html">Blog</a>
 						<a class="link-menu" href="comoajudar.html">Como ajudar</a>
@@ -28,6 +28,7 @@
 						<a class="link-menu" href="campanhas.html">Campanhas</a>
 						<a class="link-menu" href="galeria.html">Galeria</a>
 						<a class="link-menu" href="contatos.html">Contatos</a>
+						<a class="link-menu" href="orcamento_hospedagem.html">Hospedagem e domínio</a>
 					</div>
 				</details>
 			</nav>
@@ -51,34 +52,61 @@
 				<p class="subtitulo">Faça parte</p>
 				<h2>Seja voluntário</h2>
 			</div>
-			<p class="texto-secao">Explique aqui como participar, quais são os requisitos e qual é o próximo passo.</p>
+			<p class="texto-secao">O Planeta em Foco aproxima pessoas interessadas em cuidar dos espaços onde vivem. A participação pode apoiar as iniciativas de acesso à água potável e de cuidado com áreas públicas.</p>
+			<h2>Como começar</h2>
+			<p class="texto-secao">Conheça os projetos e acompanhe as campanhas divulgadas pelo grupo. Quando uma atividade for anunciada, verifique as orientações e as necessidades locais antes de participar.</p>
+			<h2>Áreas de contribuição</h2>
+			<p class="texto-secao">Você pode colaborar em mutirões de limpeza, ações de conscientização e iniciativas comunitárias. Preencha a ficha abaixo para indicar seu interesse. O calendário das atividades ainda será divulgado.</p>
+			<p class="texto-secao"><a href="projetos.html">Conheça os projetos</a> e <a href="campanhas.html">acompanhe as campanhas</a>.</p>
+			<h2>Ficha de interesse</h2>
+			<form class="formulario-voluntario" id="inscricao-voluntario">
+				<div class="campos-voluntario">
+					<div class="campo-voluntario">
+						<label for="nome-voluntario">Nome completo</label>
+						<input id="nome-voluntario" name="nome" type="text" autocomplete="name" required>
+					</div>
+					<div class="campo-voluntario">
+						<label for="email-voluntario">E-mail</label>
+						<input id="email-voluntario" name="email" type="email" autocomplete="email" required>
+					</div>
+					<div class="campo-voluntario">
+						<label for="telefone-voluntario">Telefone (opcional)</label>
+						<input id="telefone-voluntario" name="telefone" type="tel" autocomplete="tel">
+					</div>
+					<div class="campo-voluntario">
+						<label for="cidade-voluntario">Cidade</label>
+						<input id="cidade-voluntario" name="cidade" type="text" autocomplete="address-level2" required>
+					</div>
+					<fieldset class="opcoes-voluntario campo-amplo">
+						<legend>Em quais atividades você tem interesse?</legend>
+						<label><input name="areas" type="checkbox" value="agua"> Água para Todos</label>
+						<label><input name="areas" type="checkbox" value="limpeza"> Comunidade Limpa</label>
+						<label><input name="areas" type="checkbox" value="conscientizacao"> Ações de conscientização</label>
+					</fieldset>
+					<div class="campo-voluntario campo-amplo">
+						<label for="disponibilidade-voluntario">Quando costuma ter disponibilidade?</label>
+						<select id="disponibilidade-voluntario" name="disponibilidade" required>
+							<option value="">Selecione uma opção</option>
+							<option value="dias-uteis">Dias úteis</option>
+							<option value="fins-de-semana">Fins de semana</option>
+							<option value="variavel">Minha disponibilidade varia</option>
+					</select>
+					</div>
+					<div class="campo-voluntario campo-amplo">
+						<label for="motivacao-voluntario">O que você gostaria de contribuir?</label>
+						<textarea id="motivacao-voluntario" name="motivacao" rows="4" placeholder="Conte um pouco sobre seu interesse ou experiência."></textarea>
+					</div>
+				</div>
+				<p class="aviso-formulario">Esta ficha ainda não está conectada a um sistema de cadastro. As respostas não serão enviadas nem armazenadas.</p>
+				<button class="botao-voluntario" type="submit" disabled>Enviar inscrição</button>
+				<p class="retorno-formulario" id="retorno-inscricao" aria-live="polite"></p>
+			</form>
 		</section>
 	</main>
 	<hr>
 	<footer>
 		<p>&copy; 2026 Planeta em foco. Todos os direitos reservados.</p>
 	</footer>
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const scrollButton = document.querySelector('.seta-rolagem');
-
-			if (!scrollButton) return;
-
-			const goToBottom = () => {
-				window.scrollTo({
-					top: document.documentElement.scrollHeight,
-					behavior: 'smooth'
-				});
-			};
-
-			scrollButton.addEventListener('click', goToBottom);
-			scrollButton.addEventListener('keydown', (event) => {
-				if (event.key === 'Enter' || event.key === ' ') {
-					event.preventDefault();
-					goToBottom();
-				}
-			});
-		});
-	</script>
+	<script src="../js/script.js"></script>
 </body>
 </html>

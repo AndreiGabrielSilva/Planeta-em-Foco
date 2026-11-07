@@ -1,0 +1,662 @@
+PLANETA EM FOCO
+GUIA MUITO DETALHADO PARA APRESENTACAO DO PROJETO E DO CODIGO
+
+Este arquivo explica a estrutura e o funcionamento do projeto como um todo:
+paginas HTML, folha de estilos CSS, JavaScript, imagens, videos, formularios,
+navegacao, responsividade, acessibilidade e limitacoes atuais. O objetivo e
+servir como material de estudo e como roteiro para uma apresentacao oral.
+
+======================================================================
+1. VISAO GERAL DO PROJETO
+======================================================================
+
+O Planeta em Foco e um site informativo sobre meio ambiente e iniciativas
+comunitarias. Seu conteudo apresenta dois projetos principais:
+
+- Agua para Todos: uma iniciativa descrita como voltada ao acesso a agua
+  potavel e a melhorias relacionadas ao abastecimento.
+- Comunidade Limpa: uma iniciativa descrita como voltada a mutiroes de
+  limpeza, cuidado com espacos publicos e conscientizacao sobre residuos.
+
+O site tambem apresenta informacoes sobre a iniciativa, campanhas, formas de
+ajudar, voluntariado, noticias, galeria, contatos e planejamento de hospedagem.
+
+Do ponto de vista tecnico, o projeto e um site estatico. Ele foi construído
+principalmente com:
+
+- HTML: define o conteudo e a estrutura das paginas.
+- CSS: define cores, tipografia, posicionamento, responsividade e efeitos
+  visuais.
+- JavaScript: adiciona algumas interacoes, como a animacao da arvore no blog,
+  a rolagem da pagina e a validacao demonstrativa do formulario de voluntariado.
+
+Nao ha um processo de compilacao ou instalacao de dependencias descrito no
+projeto. A pagina inicial e o arquivo index.html. As paginas internas estao na
+pasta html, a folha de estilos compartilhada esta em css/style.css, os scripts
+estao na pasta js e os arquivos de imagem e video estao em img.
+
+======================================================================
+2. ORGANIZACAO DOS ARQUIVOS
+======================================================================
+
+index.html
+  Pagina inicial do site. Apresenta a identidade do projeto, um menu de
+  navegacao e dois temas ambientais em destaque.
+
+html/sobre-nos.html
+  Apresenta a iniciativa, quem ela pretende aproximar e seus objetivos.
+
+html/projetos.html
+  Descreve Agua para Todos e Comunidade Limpa e mostra imagens associadas.
+
+html/feitos.html
+  Reune as informacoes disponiveis sobre as frentes de atuacao e esclarece
+  que ainda nao ha datas, numeros ou resultados documentados de atividades.
+
+html/blog.html
+  Exibe uma ilustracao animada de uma arvore e uma grade com seis noticias.
+  Tambem contem o JavaScript especifico da animacao da arvore e da queda de
+  algumas macas.
+
+html/comoajudar.html
+  Reune formas gerais de apoiar as iniciativas e links para projetos e
+  voluntariado.
+
+html/voluntario.html
+  Apresenta orientacoes para participar e uma ficha de interesse.
+
+html/campanhas.html
+  Explica as frentes de mobilizacao ligadas aos dois projetos.
+
+html/galeria.html
+  Mostra dois videos MP4 e imagens relacionadas aos projetos.
+
+html/contatos.html
+  Explica que os materiais ainda nao divulgam canais oficiais e apresenta os
+  nomes dos colaboradores.
+
+html/orcamento_hospedagem.html
+  Compara alternativas de publicacao e dominio e registra fontes e ressalvas
+  sobre valores.
+
+css/style.css
+  Folha de estilos principal e compartilhada. Define a identidade visual,
+  componentes, layouts responsivos, animacoes e estados de foco.
+
+js/script.js
+  Script compartilhado carregado pela pagina de voluntariado. Controla a seta
+  de rolagem e a validacao demonstrativa do formulario.
+
+img/
+  Contem fotografias locais dos projetos e os arquivos video1.mp4 e video2.mp4.
+
+colaboradores.txt
+  Lista os integrantes do trabalho.
+
+README.md
+  Registra como abrir o site, a estrutura das paginas e algumas limitacoes.
+
+======================================================================
+3. ESTRUTURA HTML COMUM DAS PAGINAS
+======================================================================
+
+As paginas seguem uma estrutura HTML semelhante. O elemento DOCTYPE informa
+que o documento usa HTML moderno. O elemento html indica o idioma com
+lang="pt-BR", ajudando navegadores e leitores de tela a interpretar o texto
+em portugues.
+
+Dentro de head aparecem metadados e recursos:
+
+- charset UTF-8 permite que caracteres como acentos sejam exibidos
+  corretamente.
+- viewport ajusta a largura da pagina ao dispositivo, requisito importante
+  para layouts responsivos.
+- preconnect antecipa a conexao com os servidores de fontes do Google.
+- o link para Google Fonts solicita DM Sans e Fraunces.
+- o link para css/style.css aplica os estilos compartilhados.
+- title define o titulo mostrado na aba do navegador.
+
+Nas paginas dentro de html, os caminhos para recursos da raiz usam ../, por
+exemplo ../css/style.css e ../img/video1.mp4. Isso significa "subir um nivel"
+da pasta html e depois entrar na pasta indicada.
+
+No body, muitas paginas usam tres grandes regioes:
+
+1. Capa, criada com a classe .capa. Funciona como cabecalho visual da pagina.
+2. Main, que contem o conteudo principal.
+3. Footer, que mostra o aviso de direitos autorais.
+
+O cabecalho visual costuma conter:
+
+- linha-superior: nome do observatorio, identificacao da edicao e navegacao;
+- navegacao: menu principal com links para as paginas;
+- destaque: imagem do planeta, subtitulo, titulo principal e descricao;
+- linha-inferior: frase de identidade e seta ou link para rolagem.
+
+O menu usa os elementos nativos details e summary. O summary funciona como
+controle que abre ou fecha o menu sem precisar programar essa abertura com
+JavaScript. Os links internos usam caminhos relativos para navegar entre os
+arquivos do projeto.
+
+As secoes de conteudo normalmente usam main, section, article, h2, p, figure,
+img e footer. Essas tags ajudam a organizar o documento tanto visualmente
+quanto semanticamente. Os atributos alt das imagens descrevem o que aparece
+nelas; aria-label e aria-labelledby identificam regioes ou controles para
+tecnologias assistivas.
+
+======================================================================
+4. EXPLICACAO DE CADA PAGINA
+======================================================================
+
+4.1 index.html - pagina inicial
+
+A pagina inicial apresenta a marca "Planeta em foco", uma imagem da Terra e a
+frase que resume a proposta: entender impactos ambientais e mostrar como
+escolhas podem ajudar.
+
+O menu da pagina inicial tem links para todas as paginas internas. Depois da
+capa, o main apresenta uma secao de temas ambientais com dois cartoes:
+
+- saneamento, com imagem e texto sobre infraestrutura e saude;
+- residuos, com imagem e texto sobre reduzir, reutilizar e reciclar.
+
+Cada cartao usa figure, img e figcaption. O figure agrupa a imagem e sua
+legenda; o figcaption contem etiqueta, frase principal e explicacao. O tabindex
+permite que os cartoes recebam foco pelo teclado, para que os efeitos de
+legenda nao dependam somente do mouse.
+
+A imagem principal do planeta vem de um endereco externo do Unsplash. Por isso,
+essa imagem depende de conexao com a internet. As fotografias dos cartoes sao
+locais.
+
+Observacao funcional: a seta da capa na pagina inicial e um button, mas o
+index.html nao carrega o script de rolagem usado em algumas paginas internas.
+Assim, no estado atual, a seta tem aparencia visual, mas nao executa a rolagem
+ao ser clicada.
+
+4.2 html/sobre-nos.html - sobre nos
+
+Apresenta a identidade e a motivacao do Planeta em Foco. O conteudo explica que
+a ideia e aproximar pessoas interessadas em cuidar dos lugares onde vivem.
+Depois, descreve o objetivo de incentivar cidades mais limpas, sustentaveis e
+participativas.
+
+A pagina usa titulos, paragrafos e separadores hr para dividir os assuntos.
+O texto tambem descreve o site como uma ferramenta de conexao para divulgar
+projetos, campanhas, eventos e resultados.
+
+4.3 html/projetos.html - projetos
+
+Descreve separadamente Agua para Todos e Comunidade Limpa. Cada iniciativa tem
+um titulo, um paragrafo de objetivo e imagens ilustrativas locais.
+
+As imagens sao inseridas com img e texto alternativo alt. A largura visual e
+controlada pela classe .imagem-projeto-um. O texto alternativo deve descrever
+a imagem, nao necessariamente repetir o nome do arquivo.
+
+4.4 html/feitos.html - feitos e transparencia
+
+Esta pagina apresenta as informacoes disponiveis sobre os projetos, mas deixa
+claro que o material atual nao registra datas, quantidades ou resultados de
+atividades concluidas. A pagina evita inventar metricas e apresenta objetivos
+conhecidos para cada frente.
+
+Essa transparencia e importante: o nome da pagina pode sugerir uma lista de
+resultados, mas o texto diferencia iniciativas propostas de resultados
+comprovados.
+
+4.5 html/blog.html - noticias e ilustracao interativa
+
+O blog possui duas partes principais.
+
+A primeira e uma cena ilustrada de uma arvore. Ela e formada por elementos HTML
+simples, como divs e spans, posicionados e estilizados pelo CSS. O sol, solo,
+raiz, tronco, galhos, folhas e macas nao sao uma unica imagem: sao pecas
+separadas que, juntas, compoem uma ilustracao. Isso permite animar cada parte.
+
+A arvore tem muitos elementos com classes numeradas, por exemplo folha-1,
+folha-2, galho-1 e maca-1. O CSS posiciona as folhas e os galhos com valores
+percentuais e distancias a partir do fundo da cena. Com opacidade, transform e
+transition, os elementos podem surgir e crescer.
+
+A segunda parte do blog e uma grade de seis noticias. Cada noticia esta dentro
+de article.card-noticia e inclui imagem, texto alternativo, categoria, data,
+titulo, resumo e link "Leia mais". O layout usa cartoes, e o botao fica na parte
+inferior do cartao para manter um alinhamento visual mais consistente.
+
+Os links "Leia mais" usam href="#", que e um destino provisório: ainda nao
+levam a paginas com o artigo completo.
+
+O JavaScript no final de blog.html controla a interacao com a arvore:
+
+- busca a cena .arvore-scene;
+- prepara dois elementos de maca para uma animacao de queda;
+- espera um clique dentro da cena;
+- calcula a posicao do clique e cria um elemento temporario onda-clique;
+- adiciona a classe arvore-fixa para mostrar a arvore completa;
+- inicia a animacao das duas macas uma unica vez;
+- remove a onda visual depois de um intervalo.
+
+A funcao animarMaca mantem um estado para cada maca: coordenadas, velocidade
+horizontal e vertical, gravidade, quantidade de quiques, rotacao e instante da
+ultima atualizacao. requestAnimationFrame solicita atualizacoes sincronizadas
+com a exibicao do navegador. A gravidade acelera a maca para baixo; ao tocar o
+chao, a velocidade vertical e invertida para simular quiques, que diminuem ate
+a maca parar.
+
+Essa animacao e uma composicao demonstrativa. Ela nao atualiza dados ambientais
+nem representa uma medicao real de crescimento de uma arvore.
+
+4.6 html/comoajudar.html - como ajudar
+
+Explica que ha diferentes formas de apoio. Incentiva a conhecer os projetos,
+acompanhar atividades futuras, participar quando houver orientacoes divulgadas
+e compartilhar informacoes de conscientizacao.
+
+A pagina tambem tem links diretos para Projetos e Voluntarie-se. Assim, o
+conteudo informativo se conecta a outras partes do site.
+
+4.7 html/voluntario.html - voluntariado e formulario
+
+Apresenta informacoes de como acompanhar projetos e campanhas e mostra uma
+ficha de interesse. O formulario e composto por:
+
+- nome completo: campo de texto obrigatorio;
+- e-mail: campo de email obrigatorio, com validacao basica do navegador;
+- telefone: campo opcional;
+- cidade: campo de texto obrigatorio;
+- areas de interesse: grupo de caixas de selecao;
+- disponibilidade: menu select obrigatorio;
+- motivacao: area de texto livre;
+- aviso: informa que os dados nao serao enviados nem armazenados;
+- botao de envio e regiao para mostrar retorno.
+
+Cada label aponta para o id do respectivo campo. Isso facilita selecionar o
+campo clicando no texto e ajuda tecnologias assistivas. Os atributos
+autocomplete sugerem ao navegador quais dados podem ser preenchidos
+automaticamente. O fieldset e o legend agrupam as caixas de selecao em uma
+pergunta comum.
+
+O formulario nao esta ligado a um servidor ou servico externo. Portanto, os
+dados nao sao gravados e nao chegam aos responsaveis. O proprio texto de aviso
+comunica essa limitacao.
+
+4.8 html/campanhas.html - campanhas
+
+Apresenta a relacao entre campanhas e os dois projetos. Informa que as datas
+das proximas acoes ainda nao foram divulgadas. Isso evita apresentar
+programacao inexistente como se estivesse confirmada.
+
+4.9 html/galeria.html - galeria de imagens e videos
+
+A pagina apresenta as imagens locais como referencias visuais relacionadas
+aos temas. Ela explica que nao ha confirmacao de que as fotos sejam registros
+das atividades do Planeta em Foco.
+
+A secao de video e identificada pelo titulo "Assista as iniciativas". Dentro
+dela ha dois elementos video:
+
+- o primeiro carrega ../img/video1.mp4 e usa projeto12.jpg como poster;
+- o segundo carrega ../img/video2.mp4 e usa projeto22.jpg como poster.
+
+O atributo controls solicita controles nativos, como reproduzir, pausar,
+ajustar volume e navegar pela linha do tempo. playsinline permite reproducao
+dentro da pagina em dispositivos compativeis. preload="metadata" solicita
+informacoes basicas do arquivo antes de baixar o video inteiro. Poster mostra
+uma imagem de capa antes da reproducao. aria-label diferencia os players para
+leitores de tela.
+
+No CSS, os dois videos aparecem lado a lado em uma grade de duas colunas. Cada
+player ocupa o espaco disponivel e mantem proporcao 16:9. Em telas estreitas,
+a regra de media query muda a grade para uma coluna. A caixa de videos e
+centralizada, tem largura maxima menor que a area total da pagina e combina
+fundo, borda arredondada e sombra discreta.
+
+Os controles sao os do navegador, e nao botoes personalizados. O site ainda
+nao inclui faixas de legenda WebVTT nem transcricao textual para os arquivos,
+portanto ha recursos basicos de acessibilidade, mas nao acessibilidade
+audiovisual completa.
+
+4.10 html/contatos.html - contatos e colaboradores
+
+Explica que os materiais disponiveis ainda nao informam email ou perfil oficial
+para contato. Em vez de inventar um canal, direciona as pessoas para as paginas
+de projetos e voluntariado. Tambem apresenta os colaboradores do trabalho.
+
+4.11 html/orcamento_hospedagem.html - hospedagem e dominio
+
+Compara tres caminhos para publicar um site estatico:
+
+- GitHub Pages;
+- Cloudflare Pages;
+- hospedagem tradicional Hostinger Premium.
+
+Cada opcao e um article com resumo, dados em lista de descricao e link para
+fonte. O elemento dl agrupa pares de termos e valores: dt nomeia o dado e dd
+apresenta o valor.
+
+Uma das opcoes recebe classe adicional para destaque. Um aside separado
+apresenta recomendacao para o projeto. Notas e fontes informam que os valores
+sao referencias, sujeitos a mudanca e devem ser confirmados. Os links externos
+abrem em outra aba e usam rel="noopener noreferrer" como precaucao ao navegar
+com target="_blank".
+
+======================================================================
+5. EXPLICACAO DETALHADA DO CSS
+======================================================================
+
+5.1 Variaveis e regras globais
+
+O seletor :root define variaveis CSS reutilizaveis:
+
+- --paper: tom claro usado como papel ou fundo;
+- --ink: cor principal dos textos;
+- --forest: verde escuro da identidade visual;
+- --leaf: verde claro de destaque;
+- --sun: amarelo/laranja para acentos;
+- --muted: cor para textos secundarios.
+
+Usar variaveis evita repetir codigos de cor em muitas regras. Se a paleta
+mudar, os valores centrais podem ser ajustados em um unico lugar.
+
+O seletor universal * aplica box-sizing: border-box, fazendo com que largura
+e altura incluam padding e borda. Isso torna o calculo de dimensoes mais
+previsivel.
+
+O body remove a margem padrao do navegador, define a cor do texto e coloca uma
+textura pontilhada discreta sobre o fundo claro. A familia DM Sans e a fonte
+principal.
+
+5.2 Capa, navegacao e destaque
+
+.capa usa display:flex em coluna e justify-content:space-between para distribuir
+linha superior, destaque central e linha inferior. Tem altura minima, padding,
+texto claro e fundo verde texturizado.
+
+.linha-superior e .linha-inferior compartilham alinhamento, distribuicao,
+tipografia pequena e letras maiusculas. A linha superior tem borda inferior e
+a linha inferior tem borda superior, formando os limites visuais da capa.
+
+.navegacao e .menu posicionam o menu. .opcoes-menu e colocado de forma absoluta
+para aparecer abaixo do controle sem empurrar o restante da pagina. O menu
+aparece quando ha hover, foco dentro do menu ou atributo open no elemento
+details. Os seletores :hover e :focus-visible fazem o menu responder tanto ao
+mouse quanto ao teclado.
+
+.botao-menu e .link-menu aplicam cores, padding e transicoes. Estados de hover,
+foco e menu aberto mudam cor e fundo e podem deslocar levemente o item. O foco
+visivel recebe contorno para que a navegacao por teclado seja perceptivel.
+
+.destaque usa CSS Grid, com uma coluna para a imagem e outra para o texto.
+.imagem-planeta tem formato circular, borda, recorte object-fit:cover e sombra
+externa. .texto-destaque usa Fraunces para titulo e DM Sans para texto de apoio.
+
+.seta-rolagem e desenhada como controle circular. A animacao flutuar-seta move
+a seta suavemente. Hover e foco alteram escala, fundo, contorno e sombra; o
+estado active representa o pressionamento. A regra de foco remove o outline
+padrao, mas adiciona outros indicios visuais de destaque.
+
+5.3 Secoes de conteudo e galeria de videos
+
+.temas centraliza o conteudo principal com largura maxima e espaco vertical.
+.titulo-secao limita a largura do titulo, aplica Fraunces e controla o
+espacamento. .texto-secao define largura de leitura, cor secundaria e
+entrelinha.
+
+.video-galeria e a caixa que agrupa titulo e players. Ela possui largura maxima
+de 860 pixels, margem automatica para centralizacao, preenchimento responsivo,
+borda, cantos arredondados e sombra.
+
+.video-galeria-grade usa grid de duas colunas iguais, com espacamento entre
+elas. .video-galeria-player ocupa 100% da coluna, conserva proporcao 16:9,
+tem fundo escuro enquanto o video nao esta visivel, borda e sombra. O seletor
+:focus-visible destaca o player quando recebe foco.
+
+Na media query de 600 pixels ou menos, a grade passa a uma coluna. Assim, cada
+video fica mais largo e utilizavel em dispositivos estreitos.
+
+5.4 Cartoes de hospedagem e formulario
+
+.hospedagem-grade tambem usa CSS Grid, mas adapta a quantidade de colunas
+automaticamente conforme o espaco disponivel. Cada .hospedagem-opcao e um
+cartao vertical, e .hospedagem-recomendada diferencia a opcao destacada.
+
+As regras de dl, dt e dd alinham rótulos e valores em cada linha do comparativo.
+A recomendacao tem borda lateral de cor de destaque e fundo claro.
+
+.formulario-voluntario cria um painel com largura maxima, borda e padding.
+.campos-voluntario organiza campos em colunas que se adaptam a largura minima
+disponivel. .campo-amplo ocupa todas as colunas, por exemplo para a pergunta
+de interesses ou a area de texto.
+
+Labels, inputs, select e textarea compartilham estilos de tipografia, borda,
+fundo e espacamento. O seletor focus-visible desenha contorno para facilitar
+identificacao do campo ativo. Checkboxes recebem cor de destaque verde.
+
+O botao .botao-voluntario tem estados hover, focus-visible e active com mudanca
+de cor, elevacao e sombra. Quando disabled, fica menos opaco e mostra o cursor
+de indisponibilidade, indicando que nao pode ser usado.
+
+5.5 Ilustracao da arvore
+
+A secao .arvore-scroll e .arvore-wrapper define o painel e a distribuicao em
+duas colunas: cena visual e texto. O painel usa fundo em gradiente, borda
+suave, cantos arredondados e sombra.
+
+.arvore-scene define uma area relativa, limitada em largura e altura, com
+overflow:hidden. O posicionamento relativo permite que sol, solo, tronco,
+galhos, folhas e macas usem posicao absoluta dentro da cena.
+
+As classes .sol, .solo, .raiz e .tronco criam as partes principais com formas,
+gradientes e sombras. Os galhos usam rotacao e escala horizontal. As folhas
+sao posicionadas individualmente por classes numeradas. A combinacao de
+gradientes, bordas arredondadas, sombras e transform cria uma ilustracao sem
+arquivo de imagem externo.
+
+No estado inicial, partes da arvore tem baixa opacidade ou escala pequena. Com
+hover, foco interno ou a classe arvore-fixa, CSS aumenta opacidade e escala,
+fazendo a arvore parecer crescer. As macas tambem surgem com atrasos
+escalonados para dar uma sensacao de sequencia.
+
+.onda-clique e @keyframes onda-crescendo criam uma onda visual que se expande
+e desaparece a partir do ponto clicado. O JavaScript cria e remove o elemento;
+o CSS cuida de sua aparencia e animacao.
+
+5.6 Noticias, imagens e botoes
+
+.noticias-header organiza titulo e frase lateral. .grade-noticias usa tres
+colunas em telas largas. .card-noticia usa flex em coluna para que o conteudo
+se organize verticalmente e o link de acao fique no final.
+
+Ao passar o mouse ou focar um cartao, ele sobe ligeiramente, ganha sombra e
+borda mais forte. A imagem pode aumentar um pouco e mudar de saturacao. A
+classe .tag-noticia estiliza a categoria como etiqueta arredondada; a data e
+apresentada com um pequeno ponto decorativo.
+
+.botao-noticia estiliza os links "Leia mais" como botoes arredondados. Hover e
+foco mudam o fundo, acrescentam sombra e elevam o link. Active simula o
+pressionamento. O foco visivel ganha contorno.
+
+.grade-imagens organiza os cartoes da pagina inicial. .cartao-imagem mantem
+proporcao, recorta o excesso e posiciona a legenda sobre a imagem. Em hover ou
+foco, a imagem escurece e a legenda aparece. Em dispositivos sem hover, a
+legenda permanece visivel para nao depender do ponteiro do mouse.
+
+.imagem-projeto-um limita a largura das imagens de projetos ao espaco
+disponivel, sem ultrapassar 500 pixels.
+
+5.7 Responsividade e movimento reduzido
+
+As media queries adaptam o layout a diferentes larguras:
+
+- ate 760 pixels: a capa e mais compacta, a imagem do planeta e menor, os
+  titulos reduzem e a grade de imagens vira uma coluna; as noticias passam a
+  duas colunas;
+- ate 600 pixels: videos passam a uma coluna;
+- ate 480 pixels: tipografia e espacamentos ficam menores, o destaque da capa
+  vira uma coluna, as noticias passam a uma coluna e os cartoes ficam
+  adequados a telas pequenas;
+- hover:none: a legenda dos cartoes de imagem fica sempre visivel em telas
+  sem mouse;
+- prefers-reduced-motion: reduz transicoes para pessoas que configuraram no
+  sistema operativo preferencia por menos movimento.
+
+O rodape usa fundo verde escuro, texto claro e alinhamento central.
+
+======================================================================
+6. EXPLICACAO DO JAVASCRIPT
+======================================================================
+
+6.1 js/script.js
+
+Este arquivo e carregado por voluntario.html. O script procura o botao de
+voluntariado e, se existir, registra eventos de mouseover e mouseout. No
+mouseover, aplica uma cor de fundo inline; no mouseout, define outra cor inline.
+
+O mesmo arquivo registra um listener para DOMContentLoaded, evento que indica
+que o HTML ja foi interpretado. Dentro dele, procura a seta de rolagem, o
+formulario e a area de retorno.
+
+A seta, quando encontrada, recebe um listener de click. A funcao goToBottom usa
+window.scrollTo com comportamento smooth para rolar ate o final da pagina.
+Tambem ha um listener de teclado para Enter e espaco.
+
+Para o formulario, o script:
+
+- localiza o botao de envio e o habilita;
+- coleta as caixas de selecao da pergunta areas;
+- limpa a mensagem de validacao personalizada quando uma opcao muda;
+- escuta o evento submit;
+- exige ao menos uma area selecionada;
+- se nenhuma estiver selecionada, define e apresenta uma mensagem de
+  validacao;
+- quando os campos passam pela validacao, impede o envio padrao e mostra um
+  aviso de que a ficha ainda precisa ser conectada a um servico.
+
+Mesmo que a interface mostre uma mensagem positiva de preenchimento, nao ha
+envio real nem armazenamento dos dados. Isso e informado no proprio formulario.
+
+Observacao tecnica importante para apresentar: o script altera o background do
+botao diretamente pelo JavaScript no mouseover/mouseout, enquanto tambem existem
+efeitos visuais definidos no CSS. Portanto, embora os efeitos de hover em
+varios componentes estejam no CSS, o botao de voluntariado atualmente ainda
+tem uma pequena interacao de cor controlada por JavaScript.
+
+6.2 JavaScript embutido nas paginas
+
+Algumas paginas internas repetem um script semelhante ao final do HTML para
+fazer a seta rolar ate o fim da pagina. Ele espera DOMContentLoaded, encontra
+.seta-rolagem e registra click e teclas Enter/espaco.
+
+Em voluntario.html, a seta e formulario sao tratados pelo arquivo externo
+js/script.js. Em blog.html, ha o script especifico da arvore descrito na secao
+do blog.
+
+A repeticao do script da seta em varias paginas e uma decisao existente no
+projeto; nao ha atualmente um unico modulo JavaScript compartilhado por todas
+as paginas para essa funcionalidade.
+
+======================================================================
+7. ACESSIBILIDADE: O QUE EXISTE E O QUE AINDA FALTA
+======================================================================
+
+Recursos presentes:
+
+- idioma pt-BR declarado no HTML;
+- navegacao principal identificada com aria-label;
+- secoes com nomes acessiveis;
+- texto alternativo em imagens;
+- labels associados aos campos do formulario;
+- agrupamento de caixas com fieldset e legend;
+- destaque visual de foco em diversos controles;
+- menu feito com details e summary nativos;
+- videos com controles do navegador e aria-label;
+- layouts responsivos;
+- regra para reduzir transicoes quando o usuario prefere menos movimento;
+- legenda dos cartoes visivel em dispositivos sem hover.
+
+Limites conhecidos:
+
+- os videos nao tem legenda nem transcricao;
+- o formulario nao envia nem armazena dados;
+- a animacao da arvore e principalmente visual;
+- a seta da pagina inicial nao tem o mesmo script de rolagem das paginas
+  internas;
+- alguns links do blog ainda apontam para #;
+- o projeto informa no README que ainda nao passou por uma auditoria completa
+  de acessibilidade.
+
+Assim, e correto dizer que ha recursos basicos de acessibilidade, mas nao que o
+site ja e totalmente acessivel ou que passou por certificacao.
+
+======================================================================
+8. COMO APRESENTAR A COMPOSICAO VISUAL
+======================================================================
+
+A identidade visual combina fundo de papel claro com tons de verde, cor de
+folha e amarelo solar. O verde escuro serve para fundos e elementos de maior
+contraste; a cor clara e usada no corpo do site; o amarelo aparece como
+destaque para pequenos detalhes, subtitulos, pontos e foco.
+
+DM Sans e usada principalmente em textos de leitura, menus e controles.
+Fraunces aparece em titulos e frases de destaque, criando contraste entre uma
+fonte de leitura simples e uma fonte com mais personalidade editorial.
+
+A capa funciona como abertura de cada pagina: apresenta identificacao, menu,
+imagem circular do planeta, titulo e uma frase curta. O conteudo principal
+continua em fundo claro, com largura limitada para evitar linhas excessivamente
+longas. Cartoes, bordas suaves, sombras e espacamento separam assuntos sem
+carregar a pagina.
+
+O uso de grid e flex permite alinhar elementos sem depender de posicoes fixas
+para todo o documento. As media queries modificam as colunas e tamanhos em
+telas menores. O resultado pretendido e manter a hierarquia de informacao em
+computador e celular.
+
+======================================================================
+9. ROTEIRO ORAL SUGERIDO
+======================================================================
+
+"O Planeta em Foco e um site estatico feito com HTML, CSS e JavaScript. A
+estrutura foi dividida em paginas para apresentar a iniciativa, os projetos,
+as campanhas, as noticias, a galeria e as formas de participacao.
+
+No HTML, organizamos cada pagina com cabecalho, navegacao, conteudo principal
+e rodape. Usamos tags semanticas como main, section e article para deixar mais
+clara a funcao das partes. O menu e baseado no elemento details do proprio
+HTML, e as paginas compartilham a mesma folha de estilos.
+
+No CSS, criamos uma identidade visual com verdes, tons claros e destaques
+amarelos. Usamos DM Sans nos textos e Fraunces nos titulos. Grid e Flexbox
+organizam os conteudos; as media queries adaptam os layouts para celular.
+Tambem existem efeitos de foco, hover e clique, transicoes e uma regra para
+reduzir animacoes.
+
+O JavaScript acrescenta interacoes pontuais. A seta pode levar ao final da
+pagina, o formulario verifica se pelo menos uma area de voluntariado foi
+escolhida e o blog tem uma arvore ilustrada que cresce e solta macas quando
+interagimos com ela.
+
+A galeria mostra dois videos MP4 com controles nativos e proporcao 16 por 9.
+Eles aparecem lado a lado em telas maiores e um abaixo do outro em telas
+estreitas. A ficha de voluntariado e demonstrativa e ainda nao envia dados.
+Da mesma forma, os links de leitura do blog ainda sao destinos provisórios.
+O projeto tambem pode evoluir com legendas para os videos, transcricoes e uma
+auditoria mais completa de acessibilidade."
+
+======================================================================
+10. CONCLUSAO
+======================================================================
+
+O projeto combina paginas informativas, componentes visuais reutilizaveis e
+interacoes simples sem depender de uma infraestrutura de backend. A estrutura
+e adequada para apresentar os temas e demonstrar recursos de HTML, CSS e
+JavaScript.
+
+Para transformar a ficha de interesse em cadastro real, seria necessario
+conectá-la a um servico ou backend com tratamento adequado dos dados. Para
+melhorar a acessibilidade dos videos, seria necessario fornecer legendas e
+transcricoes. Tambem e importante substituir links provisórios e atualizar
+informacoes quando existirem dados confirmados das atividades.
+
+FIM DO GUIA
