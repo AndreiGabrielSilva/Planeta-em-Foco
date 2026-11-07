@@ -36,24 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (!volunteerForm || !formFeedback) return;
 
 			const submitButton = volunteerForm.querySelector('button[type="submit"]');
-			submitButton.disabled = false;
+			if (submitButton) submitButton.disabled = false;
 			const interestOptions = [...volunteerForm.querySelectorAll('input[name="areas"]')];
 			interestOptions.forEach((option) => {
 				option.addEventListener('change', () => interestOptions[0].setCustomValidity(''));
 			});
 			volunteerForm.addEventListener('submit', (event) => {
+				event.preventDefault();
+
 				if (!interestOptions.some((option) => option.checked)) {
 					interestOptions[0].setCustomValidity('Escolha pelo menos uma área de interesse.');
 					interestOptions[0].reportValidity();
 					return;
 				}
 
-				event.preventDefault();
 				formFeedback.textContent = 'A ficha está preenchida, mas ainda não foi enviada. O cadastro precisa ser conectado a um serviço de recebimento.';
 			});
 		});
 
-const form = document.getElementById('formulario-voluntario');
 const nomeInput = document.getElementById('nome-voluntario'); // Corrigido 'voluntario'
 const emailInput = document.getElementById('email-voluntario');
 const telefoneInput = document.getElementById('telefone-voluntario');
