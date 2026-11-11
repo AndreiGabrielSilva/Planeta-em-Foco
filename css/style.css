@@ -248,7 +248,9 @@ body {
     font-weight: 500;
     line-height: 1.12;
 }
-
+.subtitulo-h3 {
+    font-size: 24px;
+}
 .texto-secao {
     max-width: 620px;
     color: var(--muted);
