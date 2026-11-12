@@ -48,4 +48,6 @@ internet permite carregar as fontes e algumas imagens externas.
 progresso de leitura, botão de voltar ao topo, menu com página atual, planeta
 interativo na capa, ampliação de imagens (projetos e galeria), busca e filtros no
 blog, "pequenas escolhas" na página inicial e máscara/contador na ficha de
-voluntariado. Todas respeitam `prefers-reduced-motion`.
+voluntariado, além de painéis que abrem e fecham em Campanhas, Como ajudar e
+Feitos. Todas respeitam `prefers-reduced-motion` e mantêm o contraste e a
+hierarquia de títulos da versão de acessibilidade.
