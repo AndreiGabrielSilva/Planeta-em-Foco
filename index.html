@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/interacoes.css" />
     <title>Planeta em foco</title>
   </head>
   <body>
@@ -99,6 +100,34 @@
           </figure>
         </div>
       </section>
+      <section class="escolhas" aria-labelledby="titulo-escolhas">
+        <div>
+          <p class="subtitulo">Pequenas escolhas</p>
+          <h2 id="titulo-escolhas">Marque o que você já faz e veja a muda crescer.</h2>
+          <ul class="escolhas-lista">
+            <li><label><input type="checkbox" /> Levo sacola reutilizável às compras</label></li>
+            <li><label><input type="checkbox" /> Fecho a torneira enquanto escovo os dentes</label></li>
+            <li><label><input type="checkbox" /> Separo o lixo reciclável do orgânico</label></li>
+            <li><label><input type="checkbox" /> Descarto o lixo só em locais corretos</label></li>
+            <li><label><input type="checkbox" /> Converso sobre meio ambiente com alguém</label></li>
+          </ul>
+        </div>
+        <figure class="escolhas-muda">
+          <svg viewBox="0 0 200 220" role="img" aria-label="Muda que cresce a cada escolha marcada">
+            <ellipse cx="100" cy="206" rx="78" ry="9" fill="#bfd48c" opacity="0.18" />
+            <circle cx="100" cy="199" r="5" fill="#e6a34b" />
+            <rect class="muda-caule" x="97" y="60" width="6" height="140" rx="3" fill="#bfd48c" />
+            <g class="muda-folha esquerda" data-passo="1"><ellipse cx="80" cy="174" rx="20" ry="9" transform="rotate(-28 80 174)" fill="#bfd48c" /></g>
+            <g class="muda-folha direita" data-passo="2"><ellipse cx="121" cy="146" rx="21" ry="9" transform="rotate(28 121 146)" fill="#bfd48c" /></g>
+            <g class="muda-folha esquerda" data-passo="3"><ellipse cx="78" cy="118" rx="22" ry="10" transform="rotate(-28 78 118)" fill="#bfd48c" /></g>
+            <g class="muda-folha direita" data-passo="4"><ellipse cx="123" cy="92" rx="22" ry="10" transform="rotate(28 123 92)" fill="#bfd48c" /></g>
+            <g class="muda-folha esquerda" data-passo="5"><ellipse cx="82" cy="66" rx="20" ry="9" transform="rotate(-28 82 66)" fill="#bfd48c" /></g>
+            <circle class="muda-fruto" cx="100" cy="52" r="10" fill="#e6a34b" />
+          </svg>
+          <figcaption aria-live="polite"></figcaption>
+          <button class="escolhas-limpar" type="button">Limpar escolhas</button>
+        </figure>
+      </section>
     </main>
     <hr />
     <footer>
@@ -126,5 +155,6 @@
         });
       });
     </script>
+      <script src="js/interacoes.js"></script>
   </body>
 </html>

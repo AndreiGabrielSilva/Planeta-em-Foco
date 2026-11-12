@@ -41,3 +41,13 @@ internet permite carregar as fontes e algumas imagens externas.
 - O site inclui recursos básicos de acessibilidade, como estrutura semântica,
 	rótulos de formulário e navegação por teclado, mas ainda não passou por uma
 	auditoria completa de acessibilidade.
+
+## Interações
+
+`css/interacoes.css` e `js/interacoes.js` reúnem as interações do site: barra de
+progresso de leitura, botão de voltar ao topo, menu com página atual, planeta
+interativo na capa, ampliação de imagens (projetos e galeria), busca e filtros no
+blog, "pequenas escolhas" na página inicial e máscara/contador na ficha de
+voluntariado, além de painéis que abrem e fecham em Campanhas, Como ajudar e
+Feitos. Todas respeitam `prefers-reduced-motion` e mantêm o contraste e a
+hierarquia de títulos da versão de acessibilidade.
