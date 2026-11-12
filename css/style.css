@@ -4,8 +4,8 @@
     --ink: #183832;
     --forest: #153f37;
     --leaf: #bfd48c;
-    --sun: #e6a34b;
-    --muted: #63736b;
+    --sun: #e69730;
+    --muted: #222423;
 }
 
 * {
@@ -238,7 +238,7 @@ body {
 }
 
 .titulo-secao .subtitulo {
-    color: #96703f;
+    color: #684c28;
 }
 
 .titulo-secao h2 {
@@ -257,7 +257,6 @@ body {
     font-size: 16px;
     line-height: 1.7;
 }
-
 .video-galeria {
     max-width: 860px;
     margin: 40px auto 56px;
@@ -364,7 +363,7 @@ body {
 
 .hospedagem-tipo {
     margin: 0 0 10px;
-    color: #96703f;
+    color: #583f1e;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -425,7 +424,7 @@ body {
 }
 
 .hospedagem-recomendacao .subtitulo {
-    color: #96703f;
+    color: #9c5900;
 }
 
 .hospedagem-recomendacao p,
