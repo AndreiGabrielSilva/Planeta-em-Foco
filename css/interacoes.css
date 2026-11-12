@@ -357,7 +357,7 @@
 }
 
 .escolhas .subtitulo {
-    color: #96703f;
+    color: #684c28;
 }
 
 .escolhas-lista {
@@ -532,7 +532,7 @@
 }
 
 .contador-campo.limite {
-    color: #96703f;
+    color: #684c28;
     font-weight: 700;
 }
 
@@ -592,4 +592,155 @@
     .escolhas-lista input::after {
         transition: none;
     }
+}
+
+/* ---------- Painéis expansíveis (Campanhas, Como ajudar, Feitos) ---------- */
+.paineis-controle {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 0 14px;
+}
+
+.paineis-alternar {
+    padding: 8px 14px;
+    border: 1px solid rgba(21, 63, 55, 0.28);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--forest);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.paineis-alternar:hover {
+    background: rgba(191, 212, 140, 0.38);
+}
+
+.paineis-alternar:focus-visible {
+    outline: 2px solid var(--sun);
+    outline-offset: 2px;
+}
+
+.painel {
+    margin: 0 0 14px;
+    border: 1px solid rgba(21, 63, 55, 0.16);
+    border-radius: 8px 24px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.painel[open] {
+    border-color: rgba(21, 63, 55, 0.4);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 14px 30px rgba(24, 56, 50, 0.08);
+}
+
+.painel > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: inherit;
+}
+
+.painel > summary::-webkit-details-marker {
+    display: none;
+}
+
+.painel > summary > :is(h2, h3) {
+    margin: 0;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.painel > summary::after {
+    content: "+";
+    flex: none;
+    display: grid;
+    width: 34px;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(21, 63, 55, 0.35);
+    border-radius: 50%;
+    color: var(--forest);
+    font-size: 20px;
+    line-height: 1;
+    transition: rotate 260ms cubic-bezier(0.22, 1, 0.36, 1), background-color 200ms ease, color 200ms ease;
+}
+
+.painel > summary:hover::after {
+    background: var(--leaf);
+}
+
+.painel[open] > summary::after {
+    rotate: 135deg;
+    background: var(--forest);
+    color: var(--paper);
+}
+
+.painel > summary:focus-visible {
+    outline: 2px solid var(--sun);
+    outline-offset: -2px;
+}
+
+.painel-corpo {
+    padding: 0 24px 24px;
+    animation: entrada-capa 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.painel-corpo > :first-child {
+    margin-top: 0;
+}
+
+.painel-corpo > :last-child {
+    margin-bottom: 0;
+}
+
+.painel-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.painel-acoes a {
+    padding: 10px 16px;
+    border: 1px solid var(--forest);
+    border-radius: 999px;
+    color: var(--forest);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.painel-acoes a:first-child {
+    background: var(--forest);
+    color: var(--paper);
+}
+
+.painel-acoes a:hover,
+.painel-acoes a:focus-visible {
+    background: var(--leaf);
+    color: var(--forest);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.painel-acoes a:focus-visible {
+    box-shadow: 0 0 0 3px var(--sun);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .painel-corpo { animation: none; }
+    .painel,
+    .painel > summary::after,
+    .painel-acoes a { transition: none; }
 }
