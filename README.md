@@ -21,11 +21,16 @@ internet permite carregar as fontes e algumas imagens externas.
 - `html/campanhas.html`: informações sobre as frentes de mobilização.
 - `html/galeria.html`: imagens relacionadas às iniciativas.
 - `html/contatos.html`: colaboradores e informações de contato disponíveis.
+- `html/acessibilidade.html`: preferências de leitura e guia de navegação por teclado.
 - `html/orcamento_hospedagem.html`: comparação de hospedagem e domínio.
 
 ## Estrutura
 
 - `css/style.css`: estilos compartilhados pelas páginas.
+- `css/acessibilidade.css` e `js/acessibilidade.js`: tamanho do texto, tema, daltonismo,
+  alto contraste, inversão de cores e leitura em voz alta (preferências salvas no navegador).
+- `css/idioma.css` e `js/idioma.js`: seletor de idioma presente em todas as páginas
+  (tradução automática pelo Google Translate, requer internet).
 - `html/`: páginas internas do site.
 - `img/`: imagens locais utilizadas nos projetos e na galeria.
 - `colaboradores.txt`: relação de integrantes do trabalho.
