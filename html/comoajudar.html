@@ -11,14 +11,19 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/interacoes.css" />
+    <link rel="stylesheet" href="../css/idioma.css" />
+    <link rel="stylesheet" href="../css/acessibilidade.css" />
+    <script src="../js/acessibilidade.js"></script>
     <title>Como ajudar | Planeta em foco</title>
   </head>
   <body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
     <div class="capa">
       <div class="linha-superior">
         <span>Observatório ambiental</span>
         <span>Edição 01 <i></i> Meio ambiente</span>
         <nav class="navegacao" aria-label="Navegação principal">
+          <a class="botao-acessibilidade" href="acessibilidade.html"><span aria-hidden="true">◐</span> Acessibilidade</a>
           <details class="menu">
             <summary class="link-menu botao-menu">Menu</summary>
             <div class="opcoes-menu">
@@ -32,6 +37,7 @@
               <a class="link-menu" href="campanhas.html">Campanhas</a>
               <a class="link-menu" href="galeria.html">Galeria</a>
               <a class="link-menu" href="contatos.html">Contatos</a>
+              <a class="link-menu" href="acessibilidade.html">Acessibilidade</a>
               <a class="link-menu" href="orcamento_hospedagem.html"
                 >Hospedagem e domínio</a
               >
@@ -64,7 +70,7 @@
         </button>
       </div>
     </div>
-    <main>
+    <main id="conteudo-principal" tabindex="-1">
       <section class="temas" aria-label="Como ajudar">
         <div class="titulo-secao">
           <p class="subtitulo">Faça sua parte</p>
@@ -119,5 +125,6 @@
       });
     </script>
       <script src="../js/interacoes.js"></script>
+      <script src="../js/idioma.js"></script>
   </body>
 </html>

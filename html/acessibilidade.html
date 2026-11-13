@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/interacoes.css" />
+    <link rel="stylesheet" href="../css/idioma.css" />
+    <link rel="stylesheet" href="../css/acessibilidade.css" />
+    <script src="../js/acessibilidade.js"></script>
+    <title>Acessibilidade | Planeta em foco</title>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+    <div class="capa">
+        <div class="linha-superior">
+            <span>Observatório ambiental</span>
+            <span>Edição 01 <i></i> Meio ambiente</span>
+            <nav class="navegacao" aria-label="Navegação principal">
+                <a class="botao-acessibilidade" href="acessibilidade.html"><span aria-hidden="true">◐</span> Acessibilidade</a>
+                <details class="menu">
+                    <summary class="link-menu botao-menu">Menu</summary>
+                    <div class="opcoes-menu">
+                        <a class="link-menu" href="../index.html">Início</a>
+                        <a class="link-menu" href="sobre-nos.html">Sobre nós</a>
+                        <a class="link-menu" href="projetos.html">Projetos</a>
+                        <a class="link-menu" href="feitos.html">Feitos</a>
+                        <a class="link-menu" href="blog.html">Blog</a>
+                        <a class="link-menu" href="comoajudar.html">Como ajudar</a>
+                        <a class="link-menu" href="voluntario.html">Voluntarie-se</a>
+                        <a class="link-menu" href="campanhas.html">Campanhas</a>
+                        <a class="link-menu" href="galeria.html">Galeria</a>
+                        <a class="link-menu" href="contatos.html">Contatos</a>
+                        <a class="link-menu" href="acessibilidade.html">Acessibilidade</a>
+                        <a class="link-menu" href="orcamento_hospedagem.html">Hospedagem e domínio</a>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <div class="destaque">
+            <img class="imagem-planeta" src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=400&q=85" alt="Planeta Terra visto do espaço">
+            <div class="texto-destaque">
+                <p class="subtitulo">Um espaço para mais pessoas</p>
+                <h1>Você escolhe <span>como navegar</span></h1>
+                <p class="descricao">Inclusão começa no acesso. Adapte a leitura e explore o site no seu ritmo.</p>
+            </div>
+        </div>
+        <div class="linha-inferior">
+            <span>IMPACTO <b>+</b> CONSCIÊNCIA <b>+</b> MUDANÇA</span>
+            <button class="seta-rolagem" type="button" aria-label="Ir para o final da página">↓</button>
+        </div>
+    </div>
+    <main id="conteudo-principal" tabindex="-1">
+        <section class="temas" aria-label="Preferências de leitura">
+            <div class="titulo-secao">
+                <p class="subtitulo">Sua leitura, do seu jeito</p>
+                <h2>Mais conforto para ler.</h2>
+            </div>
+            <p class="texto-secao">Escolha o tema, as cores e o tamanho do texto para uma leitura confortável. Suas preferências ficam salvas neste navegador quando o armazenamento está disponível e valem para todas as páginas do site.</p>
+            <p class="texto-secao">Você também pode usar o zoom do próprio navegador. No computador, experimente <kbd>Ctrl</kbd> + <kbd>+</kbd> para ampliar e <kbd>Ctrl</kbd> + <kbd>0</kbd> para restaurar.</p>
+
+            <div class="painel-acessibilidade" id="painel-acessibilidade"></div>
+            <p class="aviso-sem-js" id="aviso-sem-js">Para usar os controles desta página, habilite o JavaScript. O zoom e as preferências do navegador continuam disponíveis.</p>
+        </section>
+
+        <section class="temas" aria-labelledby="titulo-recursos">
+            <div class="titulo-secao">
+                <p class="subtitulo">Recursos do site</p>
+                <h2 id="titulo-recursos">Pequenos cuidados. Menos barreiras.</h2>
+            </div>
+            <ul class="recursos-acessibilidade">
+                <li><b>01</b><h3>Navegação por teclado</h3><p>Links, botões e campos podem ser alcançados com <kbd>Tab</kbd>. Um contorno destaca o item em foco para ajudar você a se localizar.</p></li>
+                <li><b>02</b><h3>Um atalho para o conteúdo</h3><p>O primeiro link da página aparece ao receber foco e permite pular o menu, levando você diretamente ao conteúdo principal.</p></li>
+                <li><b>03</b><h3>Imagens com contexto</h3><p>As imagens informativas têm descrições alternativas, e a galeria apresenta legendas para deixar claro o contexto de cada imagem.</p></li>
+                <li><b>04</b><h3>Formulários identificados</h3><p>Cada campo possui um rótulo. O navegador indica campos obrigatórios e verifica o formato do e-mail antes de enviar a ficha.</p></li>
+                <li><b>05</b><h3>Leitura em voz alta</h3><p>Ative a leitura para ouvir os trechos ao passar o mouse ou navegar com o teclado, com escolha de voz e velocidade.</p></li>
+                <li><b>06</b><h3>Respeito ao seu ritmo</h3><p>O layout se adapta a diferentes telas. As animações são reduzidas quando a preferência por menos movimento está ativada no seu dispositivo.</p></li>
+            </ul>
+        </section>
+
+        <section class="temas" aria-labelledby="titulo-teclado">
+            <div class="titulo-secao">
+                <p class="subtitulo">Guia rápido</p>
+                <h2 id="titulo-teclado">Explore sem o mouse.</h2>
+            </div>
+            <p class="texto-secao">Use os comandos do teclado para percorrer o conteúdo. Os mesmos links estão disponíveis no menu e no rodapé.</p>
+            <table class="tabela-teclado">
+                <caption>Comandos básicos de navegação</caption>
+                <thead><tr><th scope="col">Tecla</th><th scope="col">O que faz</th></tr></thead>
+                <tbody>
+                    <tr><td><kbd>Tab</kbd></td><td>Vai para o próximo link, botão ou campo.</td></tr>
+                    <tr><td><kbd>Shift</kbd> + <kbd>Tab</kbd></td><td>Volta para o item anterior.</td></tr>
+                    <tr><td><kbd>Enter</kbd></td><td>Abre o link ou ativa o controle selecionado.</td></tr>
+                    <tr><td><kbd>Espaço</kbd></td><td>Ativa um botão ou marca uma opção.</td></tr>
+                    <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Troca a imagem na ampliação da galeria.</td></tr>
+                    <tr><td><kbd>Esc</kbd></td><td>Fecha a ampliação da galeria e interrompe a leitura em voz alta.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="temas" aria-labelledby="titulo-barreira">
+            <div class="titulo-secao">
+                <p class="subtitulo">Um compromisso contínuo</p>
+                <h2 id="titulo-barreira">Acessibilidade se constrói com escuta.</h2>
+            </div>
+            <p class="texto-secao">A acessibilidade do site está em melhoria contínua. Testes com tecnologias assistivas e sugestões das pessoas usuárias ajudam a identificar ajustes.</p>
+            <p class="texto-secao"><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/pt-BR" target="_blank" rel="noopener">Nossa referência: introdução à acessibilidade da W3C ↗</a></p>
+            <h3 class="subtitulo-h3">Encontrou uma dificuldade?</h3>
+            <p class="texto-secao">Conte em qual página ela aconteceu, qual recurso você tentou usar e, se souber, o navegador ou a tecnologia assistiva utilizada. <a href="contatos.html">Ir para contatos →</a></p>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2026 Planeta em foco. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollButton = document.querySelector('.seta-rolagem');
+
+            if (!scrollButton) return;
+
+            const goToBottom = () => {
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: 'smooth'
+                });
+            };
+
+            scrollButton.addEventListener('click', goToBottom);
+            scrollButton.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    goToBottom();
+                }
+            });
+        });
+    </script>
+    <script src="../js/interacoes.js"></script>
+    <script src="../js/idioma.js"></script>
+  </body>
+</html>
