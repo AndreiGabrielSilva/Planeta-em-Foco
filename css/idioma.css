@@ -1,0 +1,214 @@
+/* Planeta em foco — seletor de idioma.
+   Para trocar as cores (ex.: azul-marinho como na referência), edite só as
+   variáveis do bloco .idioma logo abaixo. */
+
+.idioma {
+    --idioma-fundo: #1b4a41;
+    --idioma-lista: #12362f;
+    --idioma-borda: rgba(241, 237, 223, 0.4);
+    --idioma-destaque: var(--leaf, #bfd48c);
+    --idioma-texto: var(--paper, #f1eddf);
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 16px;
+    color: var(--idioma-texto);
+    font-size: calc(14px * var(--escala-texto, 1));
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.idioma-rotulo {
+    font-size: calc(13px * var(--escala-texto, 1));
+    font-weight: 600;
+}
+
+.idioma-caixa {
+    position: relative;
+}
+
+.idioma-botao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-width: 190px;
+    padding: 9px 14px;
+    color: var(--idioma-texto);
+    background: var(--idioma-fundo);
+    border: 1px solid var(--idioma-borda);
+    border-radius: 12px;
+    font: inherit;
+    font-size: calc(15px * var(--escala-texto, 1));
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.idioma-botao:hover,
+.idioma-botao[aria-expanded="true"] {
+    border-color: var(--idioma-destaque);
+}
+
+.idioma-botao:focus-visible {
+    outline: 2px solid var(--idioma-destaque);
+    outline-offset: 2px;
+}
+
+.idioma-seta {
+    flex: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+    transition: transform 180ms ease;
+}
+
+.idioma-botao[aria-expanded="true"] .idioma-seta {
+    transform: rotate(180deg);
+}
+
+.idioma-lista {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 30;
+    min-width: 100%;
+    width: max-content;
+    max-width: min(300px, 88vw);
+    max-height: min(62vh, 420px);
+    margin: 0;
+    padding: 6px;
+    overflow-y: auto;
+    list-style: none;
+    background: var(--idioma-lista);
+    border: 1px solid var(--idioma-borda);
+    border-radius: 14px;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+    outline: none;
+}
+
+.idioma-lista[hidden] {
+    display: none;
+}
+
+.idioma-lista li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 10px 12px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: var(--idioma-texto);
+    font-size: calc(15px * var(--escala-texto, 1));
+    cursor: pointer;
+}
+
+.idioma-lista li:hover,
+.idioma-lista li.ativo {
+    border-color: var(--idioma-destaque);
+    background: rgba(241, 237, 223, 0.06);
+}
+
+.idioma-lista li[aria-selected="true"]::after {
+    content: "\2713";
+    color: var(--idioma-destaque);
+    font-weight: 700;
+}
+
+.idioma-lista li.idioma-separador {
+    height: 1px;
+    margin: 6px 4px;
+    padding: 0;
+    border: 0;
+    background: var(--idioma-borda);
+    cursor: default;
+}
+
+.idioma-lista li.idioma-separador:hover {
+    border: 0;
+    background: var(--idioma-borda);
+}
+
+.idioma-aviso {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 30;
+    width: max-content;
+    max-width: 260px;
+    padding: 8px 12px;
+    color: var(--idioma-texto);
+    background: var(--idioma-lista);
+    border: 1px solid var(--idioma-destaque);
+    border-radius: 10px;
+    font-size: calc(12px * var(--escala-texto, 1));
+    line-height: 1.4;
+}
+
+.idioma-aviso[hidden] {
+    display: none;
+}
+
+/* O Google Translate injeta barra e balões próprios; escondemos tudo isso. */
+#google_translate_element {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skiptranslate iframe,
+iframe.skiptranslate,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+    .linha-superior {
+        flex-wrap: wrap;
+    }
+
+    .idioma {
+        margin-right: 10px;
+        gap: 8px;
+    }
+
+    .idioma-rotulo {
+        display: none;
+    }
+
+    .idioma-lista {
+        right: auto;
+        left: 0;
+        max-width: calc(100vw - 48px);
+    }
+
+    .idioma-aviso {
+        right: auto;
+        left: 0;
+    }
+
+    .idioma-botao {
+        min-width: 150px;
+        padding: 7px 10px;
+        font-size: calc(13px * var(--escala-texto, 1));
+    }
+}

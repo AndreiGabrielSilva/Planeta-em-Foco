@@ -41,7 +41,7 @@ body {
     align-items: center;
     gap: 16px;
     color: rgba(241, 237, 223, 0.72);
-    font-size: 12px;
+    font-size: calc(12px * var(--escala-texto, 1));
     font-weight: 600;
     letter-spacing: 1.4px;
     text-transform: uppercase;
@@ -150,7 +150,7 @@ body {
 .subtitulo {
     margin: 0 0 12px;
     color: var(--sun);
-    font-size: 12px;
+    font-size: calc(12px * var(--escala-texto, 1));
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -159,7 +159,7 @@ body {
 .texto-destaque h1 {
     margin: 0;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 88px;
+    font-size: calc(88px * var(--escala-texto, 1));
     font-weight: 600;
     line-height: 0.98;
 }
@@ -172,7 +172,7 @@ body {
     max-width: 530px;
     margin: 20px 0 0;
     color: rgba(241, 237, 223, 0.78);
-    font-size: 17px;
+    font-size: calc(17px * var(--escala-texto, 1));
     line-height: 1.7;
 }
 
@@ -197,7 +197,7 @@ body {
     background: transparent;
     color: var(--paper);
     font: inherit;
-    font-size: 18px;
+    font-size: calc(18px * var(--escala-texto, 1));
     cursor: pointer;
     transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
     animation: flutuar-seta 2s ease-in-out infinite;
@@ -244,17 +244,17 @@ body {
 .titulo-secao h2 {
     margin: 0;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 42px;
+    font-size: calc(42px * var(--escala-texto, 1));
     font-weight: 500;
     line-height: 1.12;
 }
 .subtitulo-h3 {
-    font-size: 24px;
+    font-size: calc(24px * var(--escala-texto, 1));
 }
 .texto-secao {
     max-width: 620px;
     color: var(--muted);
-    font-size: 16px;
+    font-size: calc(16px * var(--escala-texto, 1));
     line-height: 1.7;
 }
 .video-galeria {
@@ -274,7 +274,7 @@ body {
 .video-galeria-cabecalho .subtitulo {
     margin: 0 0 8px;
     color: #96703f;
-    font-size: 12px;
+    font-size: calc(12px * var(--escala-texto, 1));
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -283,7 +283,7 @@ body {
 .video-galeria-cabecalho h2 {
     margin: 0;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(28px, 4vw, 38px);
+    font-size: calc(clamp(28px, 4vw, 38px) * var(--escala-texto, 1));
     font-weight: 500;
     line-height: 1.15;
 }
@@ -317,7 +317,7 @@ body {
 .video-galeria-item figcaption {
     margin-top: 10px;
     color: var(--ink);
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
     font-weight: 700;
 }
 
@@ -329,7 +329,7 @@ body {
 .video-galeria-nota {
     margin: 14px 0 0;
     color: var(--muted);
-    font-size: 13px;
+    font-size: calc(13px * var(--escala-texto, 1));
     line-height: 1.6;
 }
 
@@ -364,7 +364,7 @@ body {
 .hospedagem-tipo {
     margin: 0 0 10px;
     color: #583f1e;
-    font-size: 12px;
+    font-size: calc(12px * var(--escala-texto, 1));
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -373,7 +373,7 @@ body {
 .hospedagem-recomendacao h3 {
     margin: 0 0 12px;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 25px;
+    font-size: calc(25px * var(--escala-texto, 1));
     font-weight: 500;
     line-height: 1.2;
 }
@@ -431,7 +431,7 @@ body {
 .hospedagem-rodape,
 .hospedagem-fontes {
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
 }
 
 .hospedagem-rodape {
@@ -471,7 +471,7 @@ body {
 .campo-voluntario label,
 .opcoes-voluntario legend {
     color: var(--ink);
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
     font-weight: 700;
 }
 
@@ -521,7 +521,7 @@ body {
     align-items: center;
     gap: 8px;
     color: var(--ink);
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
 }
 
 .opcoes-voluntario input {
@@ -533,7 +533,7 @@ body {
 .aviso-formulario,
 .retorno-formulario {
     color: var(--muted);
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
     line-height: 1.6;
 }
 
@@ -977,7 +977,7 @@ body {
 .texto-arvore h2 {
     margin: 0;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(32px, 3vw, 48px);
+    font-size: calc(clamp(32px, 3vw, 48px) * var(--escala-texto, 1));
     line-height: 1.1;
     color: var(--ink);
 }
@@ -989,7 +989,7 @@ body {
 .texto-arvore h2 {
     margin: 0;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(32px, 3vw, 48px);
+    font-size: calc(clamp(32px, 3vw, 48px) * var(--escala-texto, 1));
     line-height: 1.1;
     color: var(--ink);
 }
@@ -1018,13 +1018,13 @@ body {
     border-radius: 50%;
     background: rgba(21, 63, 55, 0.08);
     color: var(--forest);
-    font-size: 18px;
+    font-size: calc(18px * var(--escala-texto, 1));
 }
 
 .titulo-noticias h2 {
     margin: 0;
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(38px, 4vw, 54px);
+    font-size: calc(clamp(38px, 4vw, 54px) * var(--escala-texto, 1));
     line-height: 1;
     color: var(--ink);
 }
@@ -1032,7 +1032,7 @@ body {
 .frase-sustentabilidade {
     color: var(--forest);
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(18px, 2vw, 28px);
+    font-size: calc(clamp(18px, 2vw, 28px) * var(--escala-texto, 1));
     line-height: 1.2;
     text-align: right;
     font-style: italic;
@@ -1093,7 +1093,7 @@ body {
     border-radius: 999px;
     background: rgba(191, 212, 140, 0.38);
     color: var(--forest);
-    font-size: 11px;
+    font-size: calc(11px * var(--escala-texto, 1));
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -1105,7 +1105,7 @@ body {
     gap: 8px;
     margin-top: 16px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: calc(13px * var(--escala-texto, 1));
     font-weight: 600;
 }
 
@@ -1121,7 +1121,7 @@ body {
     margin: 12px 0 12px;
     color: var(--ink);
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(24px, 2vw, 31px);
+    font-size: calc(clamp(24px, 2vw, 31px) * var(--escala-texto, 1));
     line-height: 1.2;
     font-weight: 600;
 }
@@ -1129,7 +1129,7 @@ body {
 .card-noticia p {
     margin: 0;
     color: var(--ink);
-    font-size: 15px;
+    font-size: calc(15px * var(--escala-texto, 1));
     line-height: 1.65;
 }
 
@@ -1143,7 +1143,7 @@ body {
     border-radius: 999px;
     background: var(--forest);
     color: #fff;
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
     font-weight: 700;
     text-decoration: none;
     transition: transform 180ms ease, color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
@@ -1212,21 +1212,21 @@ body {
 
 .cartao-imagem figcaption span:first-child {
     color: var(--leaf);
-    font-size: 11px;
+    font-size: calc(11px * var(--escala-texto, 1));
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 .cartao-imagem figcaption strong {
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 30px;
+    font-size: calc(30px * var(--escala-texto, 1));
     font-weight: 500;
     line-height: 1.1;
 }
 
 .cartao-imagem figcaption span:last-child {
     max-width: 440px;
-    font-size: 15px;
+    font-size: calc(15px * var(--escala-texto, 1));
     line-height: 1.55;
 }
 
@@ -1263,11 +1263,11 @@ body {
     }
 
     .texto-destaque h1 {
-        font-size: 58px;
+        font-size: calc(58px * var(--escala-texto, 1));
     }
 
     .descricao {
-        font-size: 15px;
+        font-size: calc(15px * var(--escala-texto, 1));
     }
 
     .temas {
@@ -1287,7 +1287,7 @@ body {
 @media (max-width: 480px) {
     .linha-superior,
     .linha-inferior {
-        font-size: 9px;
+        font-size: calc(9px * var(--escala-texto, 1));
         letter-spacing: 0.8px;
     }
 
@@ -1310,11 +1310,11 @@ body {
     }
 
     .texto-destaque h1 {
-        font-size: 52px;
+        font-size: calc(52px * var(--escala-texto, 1));
     }
 
     .titulo-secao h2 {
-        font-size: 34px;
+        font-size: calc(34px * var(--escala-texto, 1));
     }
 
     .noticias-header {
@@ -1338,7 +1338,7 @@ body {
     }
 
     .cartao-imagem figcaption strong {
-        font-size: 26px;
+        font-size: calc(26px * var(--escala-texto, 1));
     }
 }
 
@@ -1367,7 +1367,7 @@ footer{
     padding: 20px 0;
     background-color: var(--forest);
     color: var(--paper);
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
 }
 
 .link-menu {
@@ -1375,7 +1375,7 @@ footer{
     color: var(--sun);
     border: none;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-texto, 1));
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
